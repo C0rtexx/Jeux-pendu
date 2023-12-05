@@ -12,9 +12,9 @@ while tentatives_restantes > 0:
     mot_cache = ""
     for lettre in mot_a_deviner:
         if lettre in lettres_trouvees:
-            mot_cache + lettre + " "
+            mot_cache += lettre + " "
         else:
-            mot_cache + " _ "
+            mot_cache += " _ "
 
     print(f"Mot caché : {mot_cache}")
     print(f"Il vous reste {tentatives_restantes} chances sur 10.")
