@@ -23,4 +23,18 @@ while tentatives_restantes > 0:
 
     if len(lettre) == 1 :
         if lettre in mot_a_deviner:
-       
+            print(f"La lettre '{lettre}' est dans le mot.")
+            if lettre not in lettres_trouvees:
+                lettres_trouvees.append(lettre)
+        else:
+            print(f"La lettre : {lettre} est pas dans le mot.")
+        
+        if lettre in lettres_trouvees == lettre in mot_a_deviner :
+            print("Bravo, vous avez réussi")
+        
+        tentatives_restantes -= 1
+
+
+if tentatives_restantes <= 0:
+    print(f"Dommage, vous avez épuisé vos chances. Le mot était : '{mot_a_deviner}'.")
+
